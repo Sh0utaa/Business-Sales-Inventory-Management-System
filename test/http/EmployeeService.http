@@ -16,35 +16,35 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "17461507-c8c1-488b-a5ed-128a83f3bd56",
-  "name": "name-17461507",
-  "role": "Manager",
-  "createdAt": "2004-12-16T20:00:00.000Z",
-  "createdBy": "createdBy.ae9dv@example.net",
-  "modifiedAt": "2007-10-16T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.ae9dv@example.com"
+  "ID": "28919394-d287-4c81-bed7-d8937c007cc0",
+  "name": "name-28919394",
+  "role": "Delivery",
+  "createdAt": "2007-10-28T20:00:00.000Z",
+  "createdBy": "createdBy.h7uci@example.com",
+  "modifiedAt": "2016-02-22T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.h7uci@example.com"
 }
 
 
 ### Employee
 # @name Employee_PATCH
-PATCH {{server}}/odata/v4/employee/Employee/17461507-c8c1-488b-a5ed-128a83f3bd56
+PATCH {{server}}/odata/v4/employee/Employee/28919394-d287-4c81-bed7-d8937c007cc0
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "17461507-c8c1-488b-a5ed-128a83f3bd56",
-  "name": "name-17461507",
-  "role": "Manager",
-  "createdAt": "2004-12-16T20:00:00.000Z",
-  "createdBy": "createdBy.ae9dv@example.net",
-  "modifiedAt": "2007-10-16T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.ae9dv@example.com"
+  "ID": "28919394-d287-4c81-bed7-d8937c007cc0",
+  "name": "name-28919394",
+  "role": "Delivery",
+  "createdAt": "2007-10-28T20:00:00.000Z",
+  "createdBy": "createdBy.h7uci@example.com",
+  "modifiedAt": "2016-02-22T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.h7uci@example.com"
 }
 
 
 ### Employee
 # @name Employee_DELETE
-DELETE {{server}}/odata/v4/employee/Employee/17461507-c8c1-488b-a5ed-128a83f3bd56
+DELETE {{server}}/odata/v4/employee/Employee/28919394-d287-4c81-bed7-d8937c007cc0
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

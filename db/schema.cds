@@ -31,6 +31,8 @@ entity Order : cuid, managed {
     status      : OrderStatus;
     deliveryFee : Decimal;
     total       : Decimal;
+
+    items       : Composition of many OrderItem on items.order = $self;
 }
 
 type OrderStatus : String enum {
