@@ -1,0 +1,46 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Expense
+# @name Expense_GET
+GET {{server}}/odata/v4/expense/Expense
+Authorization: Basic {{username}}:{{password}}
+
+
+### Expense
+# @name Expense_POST
+POST {{server}}/odata/v4/expense/Expense
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "80368894-154e-49d4-a068-60c335ca6e5e",
+  "description": "description-8036889",
+  "amount": 35.36,
+  "date": "2001-11-01T20:00:00.000Z",
+  "category": "Packaging"
+}
+
+
+### Expense
+# @name Expense_PATCH
+PATCH {{server}}/odata/v4/expense/Expense/80368894-154e-49d4-a068-60c335ca6e5e
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "80368894-154e-49d4-a068-60c335ca6e5e",
+  "description": "description-8036889",
+  "amount": 35.36,
+  "date": "2001-11-01T20:00:00.000Z",
+  "category": "Packaging"
+}
+
+
+### Expense
+# @name Expense_DELETE
+DELETE {{server}}/odata/v4/expense/Expense/80368894-154e-49d4-a068-60c335ca6e5e
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

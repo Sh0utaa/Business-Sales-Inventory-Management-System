@@ -1,3 +1,5 @@
+namespace business.system;
+
 using { cuid, managed } from '@sap/cds/common';
 
 entity Employee : cuid, managed {

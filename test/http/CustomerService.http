@@ -1,0 +1,52 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Customer
+# @name Customer_GET
+GET {{server}}/odata/v4/customer/Customer
+Authorization: Basic {{username}}:{{password}}
+
+
+### Customer
+# @name Customer_POST
+POST {{server}}/odata/v4/customer/Customer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "8334769a-05f3-423c-a199-118b5f904b09",
+  "name": "name-8334769",
+  "phone": "phone-8334769",
+  "address": "address-8334769",
+  "createdAt": "2010-09-22T20:00:00.000Z",
+  "createdBy": "createdBy.4yn5d@example.org",
+  "modifiedAt": "2017-12-23T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.4yn5d@example.com"
+}
+
+
+### Customer
+# @name Customer_PATCH
+PATCH {{server}}/odata/v4/customer/Customer/8334769a-05f3-423c-a199-118b5f904b09
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "8334769a-05f3-423c-a199-118b5f904b09",
+  "name": "name-8334769",
+  "phone": "phone-8334769",
+  "address": "address-8334769",
+  "createdAt": "2010-09-22T20:00:00.000Z",
+  "createdBy": "createdBy.4yn5d@example.org",
+  "modifiedAt": "2017-12-23T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.4yn5d@example.com"
+}
+
+
+### Customer
+# @name Customer_DELETE
+DELETE {{server}}/odata/v4/customer/Customer/8334769a-05f3-423c-a199-118b5f904b09
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

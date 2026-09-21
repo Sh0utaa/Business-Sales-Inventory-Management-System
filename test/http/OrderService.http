@@ -1,0 +1,54 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Order
+# @name Order_GET
+GET {{server}}/odata/v4/order/Order
+Authorization: Basic {{username}}:{{password}}
+
+
+### Order
+# @name Order_POST
+POST {{server}}/odata/v4/order/Order
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "9818316c-3772-4d8b-99e0-6ea9d4ff2aa7",
+  "orderDate": "2010-04-12T20:00:00.000Z",
+  "status": "Delivered",
+  "deliveryFee": 37.22,
+  "total": 42.22,
+  "createdAt": "2022-05-16T20:00:00.000Z",
+  "createdBy": "createdBy.5ufv0@example.com",
+  "modifiedAt": "2014-01-14T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.5ufv0@example.org"
+}
+
+
+### Order
+# @name Order_PATCH
+PATCH {{server}}/odata/v4/order/Order/9818316c-3772-4d8b-99e0-6ea9d4ff2aa7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "9818316c-3772-4d8b-99e0-6ea9d4ff2aa7",
+  "orderDate": "2010-04-12T20:00:00.000Z",
+  "status": "Delivered",
+  "deliveryFee": 37.22,
+  "total": 42.22,
+  "createdAt": "2022-05-16T20:00:00.000Z",
+  "createdBy": "createdBy.5ufv0@example.com",
+  "modifiedAt": "2014-01-14T20:00:00.000Z",
+  "modifiedBy": "modifiedBy.5ufv0@example.org"
+}
+
+
+### Order
+# @name Order_DELETE
+DELETE {{server}}/odata/v4/order/Order/9818316c-3772-4d8b-99e0-6ea9d4ff2aa7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

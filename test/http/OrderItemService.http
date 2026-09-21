@@ -1,0 +1,44 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### OrderItem
+# @name OrderItem_GET
+GET {{server}}/odata/v4/order-item/OrderItem
+Authorization: Basic {{username}}:{{password}}
+
+
+### OrderItem
+# @name OrderItem_POST
+POST {{server}}/odata/v4/order-item/OrderItem
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "21816235-3a56-45e3-b6fd-56d61b2f39d7",
+  "quantity": 28,
+  "unitPrice": 14.76,
+  "subtotal": 18.75
+}
+
+
+### OrderItem
+# @name OrderItem_PATCH
+PATCH {{server}}/odata/v4/order-item/OrderItem/21816235-3a56-45e3-b6fd-56d61b2f39d7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "21816235-3a56-45e3-b6fd-56d61b2f39d7",
+  "quantity": 28,
+  "unitPrice": 14.76,
+  "subtotal": 18.75
+}
+
+
+### OrderItem
+# @name OrderItem_DELETE
+DELETE {{server}}/odata/v4/order-item/OrderItem/21816235-3a56-45e3-b6fd-56d61b2f39d7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
