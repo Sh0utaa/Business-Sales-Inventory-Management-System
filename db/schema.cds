@@ -2,12 +2,14 @@ namespace business.system;
 
 using { cuid, managed } from '@sap/cds/common';
 
-entity Employee : cuid, managed {
+entity Employee : managed {
+    key ID  : UUID @readonly;
     name    : String;
-    role    : EmployeeRole;
+    role    : EmployeeRole @assert.range;
 }
 
-entity Customer : cuid, managed {
+entity Customer : managed {
+    key ID  : UUID @readonly;
     name    : String;
     phone   : String;
     address : String;
@@ -24,12 +26,13 @@ entity Product : cuid, managed {
     lastStocked : DateTime;
 }
 
-entity Order : cuid, managed {
+entity Order : managed {
+    key ID  : UUID @readonly;
     customer    : Association to Customer not null;
     deliverer   : Association to Employee;
 
     @readonly orderDate   : DateTime @cds.on.insert: $now;
-    @readonly status      : OrderStatus default 'Pending';
+    @readonly status      : OrderStatus default 'Pending' @assert.range;
     @readonly total      : Decimal;
 
     deliveryFee : Decimal;
@@ -40,7 +43,7 @@ type OrderStatus : String enum {
     Delivered; Delivering; Pending
 }
 
-entity OrderItem : cuid {
+entity OrderItem : cuid, managed {
     order       : Association to Order;
     product     : Association to Product not null; 
     quantity    : Integer not null;
