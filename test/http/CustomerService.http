@@ -16,37 +16,27 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "49672718-b20b-4cee-8558-ad5bb92137c6",
-  "name": "name-4967271",
-  "phone": "phone-4967271",
-  "address": "address-4967271",
-  "createdAt": "2017-07-01T20:00:00.000Z",
-  "createdBy": "createdBy.2ygrr@example.org",
-  "modifiedAt": "2019-06-16T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.2ygrr@example.org"
+  "name": "name-5418534",
+  "phone": "phone-5418534",
+  "address": "address-5418534"
 }
 
 
 ### Customer
 # @name Customer_PATCH
-PATCH {{server}}/odata/v4/customer/Customer/49672718-b20b-4cee-8558-ad5bb92137c6
+PATCH {{server}}/odata/v4/customer/Customer/undefined
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "49672718-b20b-4cee-8558-ad5bb92137c6",
-  "name": "name-4967271",
-  "phone": "phone-4967271",
-  "address": "address-4967271",
-  "createdAt": "2017-07-01T20:00:00.000Z",
-  "createdBy": "createdBy.2ygrr@example.org",
-  "modifiedAt": "2019-06-16T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.2ygrr@example.org"
+  "name": "name-5418534",
+  "phone": "phone-5418534",
+  "address": "address-5418534"
 }
 
 
 ### Customer
 # @name Customer_DELETE
-DELETE {{server}}/odata/v4/customer/Customer/49672718-b20b-4cee-8558-ad5bb92137c6
+DELETE {{server}}/odata/v4/customer/Customer/undefined
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

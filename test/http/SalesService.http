@@ -16,40 +16,28 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "13262198-2802-4055-a678-0cefb272a6be",
-  "name": "name-13262198",
-  "stock": 89,
-  "price": 33.34,
-  "lastStocked": "2009-04-03T20:00:00.000Z",
-  "createdAt": "2002-02-27T20:00:00.000Z",
-  "createdBy": "createdBy.7w96e@example.org",
-  "modifiedAt": "2004-02-10T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.7w96e@example.org"
+  "ID": "9810676a-25df-4bde-867e-6036e33999ae",
+  "name": "name-9810676",
+  "price": 28.2
 }
 
 
 ### Product
 # @name Product_PATCH
-PATCH {{server}}/odata/v4/sales/Product/13262198-2802-4055-a678-0cefb272a6be
+PATCH {{server}}/odata/v4/sales/Product/9810676a-25df-4bde-867e-6036e33999ae
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "13262198-2802-4055-a678-0cefb272a6be",
-  "name": "name-13262198",
-  "stock": 89,
-  "price": 33.34,
-  "lastStocked": "2009-04-03T20:00:00.000Z",
-  "createdAt": "2002-02-27T20:00:00.000Z",
-  "createdBy": "createdBy.7w96e@example.org",
-  "modifiedAt": "2004-02-10T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.7w96e@example.org"
+  "ID": "9810676a-25df-4bde-867e-6036e33999ae",
+  "name": "name-9810676",
+  "price": 28.2
 }
 
 
 ### Product
 # @name Product_DELETE
-DELETE {{server}}/odata/v4/sales/Product/13262198-2802-4055-a678-0cefb272a6be
+DELETE {{server}}/odata/v4/sales/Product/9810676a-25df-4bde-867e-6036e33999ae
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -67,126 +55,63 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "20875761-0c1d-4373-b880-7eee5082f32d",
-  "orderDate": "2003-04-24T20:00:00.000Z",
-  "status": "Delivering",
-  "deliveryFee": 7.14,
-  "total": 23.83,
+  "ID": "28255931-5255-4b14-b09b-ef63723f5d89",
   "items": [
     {
-      "ID": "11692085-f776-4c0c-900c-466b2bdc3d86",
+      "ID": "13796249-ee47-496d-a0b0-4972cad980ac",
       "product": {
-        "ID": "13262198-2802-4055-a678-0cefb272a6be"
+        "ID": "9810676a-25df-4bde-867e-6036e33999ae"
       },
-      "quantity": 80,
-      "unitPrice": 8.29,
-      "subtotal": 100.96
+      "quantity": 26,
+      "unitPrice": 71.78,
+      "subtotal": 87.37
     },
     {
-      "ID": "11692086-8c4f-47d2-8e7b-d722f3d3ad90",
+      "ID": "13796250-0527-4971-bb1b-3223014dcbb2",
       "product": {
-        "ID": "13262198-2802-4055-a678-0cefb272a6be"
+        "ID": "9810676a-25df-4bde-867e-6036e33999ae"
       },
-      "quantity": 56,
-      "unitPrice": 16.4,
-      "subtotal": 39.17
+      "quantity": 42,
+      "unitPrice": 27.64,
+      "subtotal": 13.28
     }
-  ],
-  "createdAt": "2007-03-16T20:00:00.000Z",
-  "createdBy": "createdBy.cffu9@example.net",
-  "modifiedAt": "2019-02-17T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.cffu9@example.com"
+  ]
 }
 
 
 ### Order
 # @name Order_PATCH
-PATCH {{server}}/odata/v4/sales/Order/20875761-0c1d-4373-b880-7eee5082f32d
+PATCH {{server}}/odata/v4/sales/Order/28255931-5255-4b14-b09b-ef63723f5d89
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "20875761-0c1d-4373-b880-7eee5082f32d",
-  "orderDate": "2003-04-24T20:00:00.000Z",
-  "status": "Delivering",
-  "deliveryFee": 7.14,
-  "total": 23.83,
+  "ID": "28255931-5255-4b14-b09b-ef63723f5d89",
   "items": [
     {
-      "ID": "11692085-f776-4c0c-900c-466b2bdc3d86",
+      "ID": "13796249-ee47-496d-a0b0-4972cad980ac",
       "product": {
-        "ID": "13262198-2802-4055-a678-0cefb272a6be"
+        "ID": "9810676a-25df-4bde-867e-6036e33999ae"
       },
-      "quantity": 80,
-      "unitPrice": 8.29,
-      "subtotal": 100.96
+      "quantity": 26,
+      "unitPrice": 71.78,
+      "subtotal": 87.37
     },
     {
-      "ID": "11692086-8c4f-47d2-8e7b-d722f3d3ad90",
+      "ID": "13796250-0527-4971-bb1b-3223014dcbb2",
       "product": {
-        "ID": "13262198-2802-4055-a678-0cefb272a6be"
+        "ID": "9810676a-25df-4bde-867e-6036e33999ae"
       },
-      "quantity": 56,
-      "unitPrice": 16.4,
-      "subtotal": 39.17
+      "quantity": 42,
+      "unitPrice": 27.64,
+      "subtotal": 13.28
     }
-  ],
-  "createdAt": "2007-03-16T20:00:00.000Z",
-  "createdBy": "createdBy.cffu9@example.net",
-  "modifiedAt": "2019-02-17T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.cffu9@example.com"
+  ]
 }
 
 
 ### Order
 # @name Order_DELETE
-DELETE {{server}}/odata/v4/sales/Order/20875761-0c1d-4373-b880-7eee5082f32d
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-
-### OrderItems
-# @name OrderItems_GET
-GET {{server}}/odata/v4/sales/OrderItems
-Authorization: Basic {{username}}:{{password}}
-
-
-### OrderItems
-# @name OrderItems_POST
-POST {{server}}/odata/v4/sales/OrderItems
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "11692085-f776-4c0c-900c-466b2bdc3d86",
-  "product": {
-    "ID": "13262198-2802-4055-a678-0cefb272a6be"
-  },
-  "quantity": 80,
-  "unitPrice": 8.29,
-  "subtotal": 100.96
-}
-
-
-### OrderItems
-# @name OrderItems_PATCH
-PATCH {{server}}/odata/v4/sales/OrderItems/11692085-f776-4c0c-900c-466b2bdc3d86
-Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
-
-{
-  "ID": "11692085-f776-4c0c-900c-466b2bdc3d86",
-  "product": {
-    "ID": "13262198-2802-4055-a678-0cefb272a6be"
-  },
-  "quantity": 80,
-  "unitPrice": 8.29,
-  "subtotal": 100.96
-}
-
-
-### OrderItems
-# @name OrderItems_DELETE
-DELETE {{server}}/odata/v4/sales/OrderItems/11692085-f776-4c0c-900c-466b2bdc3d86
+DELETE {{server}}/odata/v4/sales/Order/28255931-5255-4b14-b09b-ef63723f5d89
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

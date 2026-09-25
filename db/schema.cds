@@ -25,13 +25,14 @@ entity Product : cuid, managed {
 }
 
 entity Order : cuid, managed {
-    customer    : Association to Customer;
+    customer    : Association to Customer not null;
     deliverer   : Association to Employee;
-    orderDate   : DateTime;
-    status      : OrderStatus;
-    deliveryFee : Decimal;
-    total       : Decimal;
 
+    @readonly orderDate   : DateTime @cds.on.insert: $now;
+    @readonly status      : OrderStatus default 'Pending';
+    @readonly total      : Decimal;
+
+    deliveryFee : Decimal;
     items       : Composition of many OrderItem on items.order = $self;
 }
 
@@ -41,10 +42,11 @@ type OrderStatus : String enum {
 
 entity OrderItem : cuid {
     order       : Association to Order;
-    product     : Association to Product; 
-    quantity    : Integer;
-    unitPrice   : Decimal;
-    subtotal    : Decimal;
+    product     : Association to Product not null; 
+    quantity    : Integer not null;
+
+    @readonly unitPrice   : Decimal;
+    @readonly subtotal    : Decimal;
 }
 
 entity Expense : cuid {

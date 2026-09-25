@@ -16,31 +16,31 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "11942182-0deb-4077-83c7-3a0508c3acfc",
-  "description": "description-11942182",
-  "amount": 38.47,
-  "date": "2022-04-05T20:00:00.000Z",
-  "category": "Delivery"
+  "ID": "63025306-442a-4ea9-858c-c3caa615d5b1",
+  "description": "description-6302530",
+  "amount": 10.6,
+  "date": "2005-02-14T23:00:00.000Z",
+  "category": "Production"
 }
 
 
 ### Expense
 # @name Expense_PATCH
-PATCH {{server}}/odata/v4/expense/Expense/11942182-0deb-4077-83c7-3a0508c3acfc
+PATCH {{server}}/odata/v4/expense/Expense/63025306-442a-4ea9-858c-c3caa615d5b1
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "11942182-0deb-4077-83c7-3a0508c3acfc",
-  "description": "description-11942182",
-  "amount": 38.47,
-  "date": "2022-04-05T20:00:00.000Z",
-  "category": "Delivery"
+  "ID": "63025306-442a-4ea9-858c-c3caa615d5b1",
+  "description": "description-6302530",
+  "amount": 10.6,
+  "date": "2005-02-14T23:00:00.000Z",
+  "category": "Production"
 }
 
 
 ### Expense
 # @name Expense_DELETE
-DELETE {{server}}/odata/v4/expense/Expense/11942182-0deb-4077-83c7-3a0508c3acfc
+DELETE {{server}}/odata/v4/expense/Expense/63025306-442a-4ea9-858c-c3caa615d5b1
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

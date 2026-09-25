@@ -16,35 +16,26 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "28919394-d287-4c81-bed7-d8937c007cc0",
-  "name": "name-28919394",
-  "role": "Delivery",
-  "createdAt": "2007-10-28T20:00:00.000Z",
-  "createdBy": "createdBy.h7uci@example.com",
-  "modifiedAt": "2016-02-22T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.h7uci@example.com"
+  "name": "beqar",
+  "role": "YLE"
 }
 
 
 ### Employee
 # @name Employee_PATCH
-PATCH {{server}}/odata/v4/employee/Employee/28919394-d287-4c81-bed7-d8937c007cc0
+PATCH {{server}}/odata/v4/employee/Employee/83594480-ccfa-4a1f-942b-dba13ab23d1e
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "28919394-d287-4c81-bed7-d8937c007cc0",
-  "name": "name-28919394",
-  "role": "Delivery",
-  "createdAt": "2007-10-28T20:00:00.000Z",
-  "createdBy": "createdBy.h7uci@example.com",
-  "modifiedAt": "2016-02-22T20:00:00.000Z",
-  "modifiedBy": "modifiedBy.h7uci@example.com"
+  "ID": "83594480-ccfa-4a1f-942b-dba13ab23d1e",
+  "name": "name-8359448",
+  "role": "Delivery"
 }
 
 
 ### Employee
 # @name Employee_DELETE
-DELETE {{server}}/odata/v4/employee/Employee/28919394-d287-4c81-bed7-d8937c007cc0
+DELETE {{server}}/odata/v4/employee/Employee/83594480-ccfa-4a1f-942b-dba13ab23d1e
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
