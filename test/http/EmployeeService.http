@@ -1,0 +1,50 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Employee
+# @name Employee_GET
+GET {{server}}/odata/v4/employee/Employee
+Authorization: Basic {{username}}:{{password}}
+
+
+### Employee
+# @name Employee_POST
+POST {{server}}/odata/v4/employee/Employee
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "25744796-3757-45f6-ad98-61faba99d5b7",
+  "name": "name-25744796",
+  "role": "Admin",
+  "createdAt": "2007-07-03T23:00:00.000Z",
+  "createdBy": "createdBy.fbst8@example.com",
+  "modifiedAt": "2008-11-21T23:00:00.000Z",
+  "modifiedBy": "modifiedBy.fbst8@example.net"
+}
+
+
+### Employee
+# @name Employee_PATCH
+PATCH {{server}}/odata/v4/employee/Employee/25744796-3757-45f6-ad98-61faba99d5b7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "25744796-3757-45f6-ad98-61faba99d5b7",
+  "name": "name-25744796",
+  "role": "Admin",
+  "createdAt": "2007-07-03T23:00:00.000Z",
+  "createdBy": "createdBy.fbst8@example.com",
+  "modifiedAt": "2008-11-21T23:00:00.000Z",
+  "modifiedBy": "modifiedBy.fbst8@example.net"
+}
+
+
+### Employee
+# @name Employee_DELETE
+DELETE {{server}}/odata/v4/employee/Employee/25744796-3757-45f6-ad98-61faba99d5b7
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

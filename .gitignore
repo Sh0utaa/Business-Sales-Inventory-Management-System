@@ -17,3 +17,8 @@ mta_archives/
 
 # @cap-js/cds-typer
 @cds-models
+
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+data/*.sqlite*

@@ -5,6 +5,16 @@
   "dependencies": {
     "@sap/cds": "^10.1.0"
   },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db/db.sqlite"
+        }
+      }
+    }
+  },
   "devDependencies": {
     "@cap-js/sqlite": "^3"
   },

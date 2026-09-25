@@ -1,0 +1,133 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Product
+# @name Product_GET
+GET {{server}}/odata/v4/sales/Product
+Authorization: Basic {{username}}:{{password}}
+
+
+### Product
+# @name Product_POST
+POST {{server}}/odata/v4/sales/Product
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "2495067c-d188-47bc-8ea5-130def6376d6",
+  "name": "name-2495067",
+  "price": 51.97
+}
+
+
+### Product
+# @name Product_PATCH
+PATCH {{server}}/odata/v4/sales/Product/2495067c-d188-47bc-8ea5-130def6376d6
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "2495067c-d188-47bc-8ea5-130def6376d6",
+  "name": "name-2495067",
+  "price": 51.97
+}
+
+
+### Product
+# @name Product_DELETE
+DELETE {{server}}/odata/v4/sales/Product/2495067c-d188-47bc-8ea5-130def6376d6
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Order
+# @name Order_GET
+GET {{server}}/odata/v4/sales/Order
+Authorization: Basic {{username}}:{{password}}
+
+
+### Order
+# @name Order_POST
+POST {{server}}/odata/v4/sales/Order
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "13616100-e4e1-4021-b4b2-435bc76e2fbc",
+  "items": [
+    {
+      "ID": "79017512-5334-4994-9109-f47c6d63ccd0",
+      "product": {
+        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+      },
+      "quantity": 83,
+      "unitPrice": 100.17,
+      "subtotal": 36.12,
+      "createdAt": "2023-12-21T23:00:00.000Z",
+      "createdBy": "createdBy.4pd13@example.net",
+      "modifiedAt": "2019-12-31T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.4pd13@example.org"
+    },
+    {
+      "ID": "79017521-08d3-4e63-b808-256d536987af",
+      "product": {
+        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+      },
+      "quantity": 2,
+      "unitPrice": 34,
+      "subtotal": 22.2,
+      "createdAt": "2005-03-12T23:00:00.000Z",
+      "createdBy": "createdBy.4pd14@example.com",
+      "modifiedAt": "2013-12-02T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.4pd14@example.com"
+    }
+  ]
+}
+
+
+### Order
+# @name Order_PATCH
+PATCH {{server}}/odata/v4/sales/Order/13616100-e4e1-4021-b4b2-435bc76e2fbc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "13616100-e4e1-4021-b4b2-435bc76e2fbc",
+  "items": [
+    {
+      "ID": "79017512-5334-4994-9109-f47c6d63ccd0",
+      "product": {
+        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+      },
+      "quantity": 83,
+      "unitPrice": 100.17,
+      "subtotal": 36.12,
+      "createdAt": "2023-12-21T23:00:00.000Z",
+      "createdBy": "createdBy.4pd13@example.net",
+      "modifiedAt": "2019-12-31T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.4pd13@example.org"
+    },
+    {
+      "ID": "79017521-08d3-4e63-b808-256d536987af",
+      "product": {
+        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+      },
+      "quantity": 2,
+      "unitPrice": 34,
+      "subtotal": 22.2,
+      "createdAt": "2005-03-12T23:00:00.000Z",
+      "createdBy": "createdBy.4pd14@example.com",
+      "modifiedAt": "2013-12-02T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.4pd14@example.com"
+    }
+  ]
+}
+
+
+### Order
+# @name Order_DELETE
+DELETE {{server}}/odata/v4/sales/Order/13616100-e4e1-4021-b4b2-435bc76e2fbc
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

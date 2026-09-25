@@ -1,0 +1,52 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Customer
+# @name Customer_GET
+GET {{server}}/odata/v4/customer/Customer
+Authorization: Basic {{username}}:{{password}}
+
+
+### Customer
+# @name Customer_POST
+POST {{server}}/odata/v4/customer/Customer
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "shota",
+  "name": "name-22089082",
+  "phone": "phone-22089080",
+  "address": "address-22089080",
+  "createdAt": "2008-10-15T23:00:00.000Z",
+  "createdBy": "createdBy.d5g1k@example.org",
+  "modifiedAt": "2010-10-20T23:00:00.000Z",
+  "modifiedBy": "modifiedBy.d5g1k@example.org"
+}
+
+
+### Customer
+# @name Customer_PATCH
+PATCH {{server}}/odata/v4/customer/Customer/22089080-a0a6-4805-ace0-b0a20249ebec
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "22089080-a0a6-4805-ace0-b0a20249ebec",
+  "name": "name-22089080",
+  "phone": "phone-22089080",
+  "address": "address-22089080",
+  "createdAt": "2008-10-15T23:00:00.000Z",
+  "createdBy": "createdBy.d5g1k@example.org",
+  "modifiedAt": "2010-10-20T23:00:00.000Z",
+  "modifiedBy": "modifiedBy.d5g1k@example.org"
+}
+
+
+### Customer
+# @name Customer_DELETE
+DELETE {{server}}/odata/v4/customer/Customer/22089080-a0a6-4805-ace0-b0a20249ebec
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

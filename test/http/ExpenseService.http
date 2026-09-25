@@ -1,0 +1,46 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Expense
+# @name Expense_GET
+GET {{server}}/odata/v4/expense/Expense
+Authorization: Basic {{username}}:{{password}}
+
+
+### Expense
+# @name Expense_POST
+POST {{server}}/odata/v4/expense/Expense
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "22320113-aa9a-4446-a679-c600aa9b3511",
+  "description": "description-22320113",
+  "amount": 4.42,
+  "date": "2004-06-20T23:00:00.000Z",
+  "category": "Delivery"
+}
+
+
+### Expense
+# @name Expense_PATCH
+PATCH {{server}}/odata/v4/expense/Expense/22320113-aa9a-4446-a679-c600aa9b3511
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "22320113-aa9a-4446-a679-c600aa9b3511",
+  "description": "description-22320113",
+  "amount": 4.42,
+  "date": "2004-06-20T23:00:00.000Z",
+  "category": "Delivery"
+}
+
+
+### Expense
+# @name Expense_DELETE
+DELETE {{server}}/odata/v4/expense/Expense/22320113-aa9a-4446-a679-c600aa9b3511
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

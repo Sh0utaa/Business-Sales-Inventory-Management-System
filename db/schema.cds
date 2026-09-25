@@ -2,14 +2,12 @@ namespace business.system;
 
 using { cuid, managed } from '@sap/cds/common';
 
-entity Employee : managed {
-    key ID  : UUID @readonly;
+entity Employee : cuid, managed {
     name    : String;
     role    : EmployeeRole @assert.range;
 }
 
-entity Customer : managed {
-    key ID  : UUID @readonly;
+entity Customer : cuid, managed {
     name    : String;
     phone   : String;
     address : String;
