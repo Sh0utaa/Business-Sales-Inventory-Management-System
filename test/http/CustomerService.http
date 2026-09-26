@@ -16,37 +16,25 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "shota",
-  "name": "name-22089082",
-  "phone": "phone-22089080",
-  "address": "address-22089080",
-  "createdAt": "2008-10-15T23:00:00.000Z",
-  "createdBy": "createdBy.d5g1k@example.org",
-  "modifiedAt": "2010-10-20T23:00:00.000Z",
-  "modifiedBy": "modifiedBy.d5g1k@example.org"
+  "name": "Misia",
+  "phone": "+48 666 676 769",
+  "address": "Wroclaw"
 }
 
 
 ### Customer
 # @name Customer_PATCH
-PATCH {{server}}/odata/v4/customer/Customer/22089080-a0a6-4805-ace0-b0a20249ebec
+PATCH {{server}}/odata/v4/customer/Customer/9b18489b-55a6-411d-94df-dc0f358f953f
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "22089080-a0a6-4805-ace0-b0a20249ebec",
-  "name": "name-22089080",
-  "phone": "phone-22089080",
-  "address": "address-22089080",
-  "createdAt": "2008-10-15T23:00:00.000Z",
-  "createdBy": "createdBy.d5g1k@example.org",
-  "modifiedAt": "2010-10-20T23:00:00.000Z",
-  "modifiedBy": "modifiedBy.d5g1k@example.org"
+  "name": "Lexo Tevdorashvili"
 }
 
 
 ### Customer
 # @name Customer_DELETE
-DELETE {{server}}/odata/v4/customer/Customer/22089080-a0a6-4805-ace0-b0a20249ebec
+DELETE {{server}}/odata/v4/customer/Customer/13124458-0007-4509-bbff-39250de8821f
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

@@ -16,28 +16,26 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "2495067c-d188-47bc-8ea5-130def6376d6",
-  "name": "name-2495067",
-  "price": 51.97
+  "name": "Ghost Lamp",
+  "price": 15,
+  "stock": 10
 }
 
 
 ### Product
 # @name Product_PATCH
-PATCH {{server}}/odata/v4/sales/Product/2495067c-d188-47bc-8ea5-130def6376d6
+PATCH {{server}}/odata/v4/sales/Product/ab634521-d25b-4635-8ea4-40ff2ea2cfb1
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "2495067c-d188-47bc-8ea5-130def6376d6",
-  "name": "name-2495067",
-  "price": 51.97
+  "stock": 2
 }
 
 
 ### Product
 # @name Product_DELETE
-DELETE {{server}}/odata/v4/sales/Product/2495067c-d188-47bc-8ea5-130def6376d6
+DELETE {{server}}/odata/v4/sales/Product/28736635-be8b-4719-a53e-b370bcd175df
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -55,79 +53,77 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "13616100-e4e1-4021-b4b2-435bc76e2fbc",
+  "customer": {
+    "ID": "9c2d54af-fb08-4deb-abe6-896fc8d9225e"
+  },
+  "deliverer": {
+    "ID": "14036b53-e124-4b51-a624-38f1d869530b"
+  },
   "items": [
     {
-      "ID": "79017512-5334-4994-9109-f47c6d63ccd0",
       "product": {
-        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+        "ID": "b2d77ad6-0de3-4418-89eb-27788b914ec4"
       },
-      "quantity": 83,
-      "unitPrice": 100.17,
-      "subtotal": 36.12,
-      "createdAt": "2023-12-21T23:00:00.000Z",
-      "createdBy": "createdBy.4pd13@example.net",
-      "modifiedAt": "2019-12-31T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.4pd13@example.org"
-    },
-    {
-      "ID": "79017521-08d3-4e63-b808-256d536987af",
-      "product": {
-        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
-      },
-      "quantity": 2,
-      "unitPrice": 34,
-      "subtotal": 22.2,
-      "createdAt": "2005-03-12T23:00:00.000Z",
-      "createdBy": "createdBy.4pd14@example.com",
-      "modifiedAt": "2013-12-02T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.4pd14@example.com"
+      "quantity": 5
     }
   ]
 }
 
-
 ### Order
 # @name Order_PATCH
-PATCH {{server}}/odata/v4/sales/Order/13616100-e4e1-4021-b4b2-435bc76e2fbc
+PATCH {{server}}/odata/v4/sales/Order/15284027-c1cc-4aeb-8668-79fbca622643
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "13616100-e4e1-4021-b4b2-435bc76e2fbc",
+  "ID": "15284027-c1cc-4aeb-8668-79fbca622643",
+  "customer": {
+    "ID": "19992064-d275-4c10-a1dd-49bb94f8bb35"
+  },
+  "deliverer": {
+    "ID": "15342713-7fb4-4d80-875a-55c78e66c693"
+  },
+  "orderDate": "2004-06-05T23:00:00.000Z",
+  "status": "Delivered",
+  "total": 45.68,
+  "deliveryFee": 67.05,
   "items": [
     {
-      "ID": "79017512-5334-4994-9109-f47c6d63ccd0",
+      "ID": "15487066-382e-46fa-b0c3-2e97a9ac856d",
       "product": {
-        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+        "ID": "70048587-44aa-4a01-8e12-d982441071a2"
       },
-      "quantity": 83,
-      "unitPrice": 100.17,
-      "subtotal": 36.12,
-      "createdAt": "2023-12-21T23:00:00.000Z",
-      "createdBy": "createdBy.4pd13@example.net",
-      "modifiedAt": "2019-12-31T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.4pd13@example.org"
+      "quantity": 46,
+      "unitPrice": 84.08,
+      "subtotal": 50.31,
+      "createdAt": "2001-06-12T23:00:00.000Z",
+      "createdBy": "createdBy.97xwa@example.com",
+      "modifiedAt": "2021-03-21T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.97xwa@example.net"
     },
     {
-      "ID": "79017521-08d3-4e63-b808-256d536987af",
+      "ID": "15487067-7eab-4868-bce1-ac5edbe57fff",
       "product": {
-        "ID": "2495067c-d188-47bc-8ea5-130def6376d6"
+        "ID": "28736635-be8b-4719-a53e-b370bcd175df"
       },
-      "quantity": 2,
-      "unitPrice": 34,
-      "subtotal": 22.2,
-      "createdAt": "2005-03-12T23:00:00.000Z",
-      "createdBy": "createdBy.4pd14@example.com",
-      "modifiedAt": "2013-12-02T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.4pd14@example.com"
+      "quantity": 1,
+      "unitPrice": 3.95,
+      "subtotal": 60.17,
+      "createdAt": "2015-11-17T23:00:00.000Z",
+      "createdBy": "createdBy.97xwb@example.net",
+      "modifiedAt": "2006-07-16T23:00:00.000Z",
+      "modifiedBy": "modifiedBy.97xwb@example.net"
     }
-  ]
+  ],
+  "createdAt": "2019-09-14T23:00:00.000Z",
+  "createdBy": "createdBy.93l8b@example.net",
+  "modifiedAt": "2007-03-09T23:00:00.000Z",
+  "modifiedBy": "modifiedBy.93l8b@example.com"
 }
 
 
 ### Order
 # @name Order_DELETE
-DELETE {{server}}/odata/v4/sales/Order/13616100-e4e1-4021-b4b2-435bc76e2fbc
+DELETE {{server}}/odata/v4/sales/Order/15284027-c1cc-4aeb-8668-79fbca622643
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

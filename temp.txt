@@ -1,0 +1,21 @@
+
+  // "cds": {
+  //   "requires": {
+  //     "db": {
+  //       "kind": "sqlite",
+  //       "credentials": {
+  //         "url": "db/db.sqlite"
+  //       }
+  //     }
+  //   }
+  // },
+
+Customer 
+Employee
+Product
+Order
+
+they all work well
+
+// TODO
+if product exist already don't add

@@ -3,14 +3,14 @@ namespace business.system;
 using { cuid, managed } from '@sap/cds/common';
 
 entity Employee : cuid, managed {
-    name    : String;
-    role    : EmployeeRole @assert.range;
+    name    : String not null;
+    role    : EmployeeRole not null;
 }
 
 entity Customer : cuid, managed {
-    name    : String;
-    phone   : String;
-    address : String;
+    name    : String not null;
+    phone   : String not null;
+    address : String not null;
 }
 
 type EmployeeRole : String enum {
@@ -18,16 +18,15 @@ type EmployeeRole : String enum {
 }
 
 entity Product : cuid, managed {
-    name        : String;
-    stock       : Integer;
-    price       : Decimal;
-    lastStocked : DateTime;
+    name        : String not null;
+    stock       : Integer not null;
+    price       : Decimal not null;
 }
 
 entity Order : managed {
-    key ID  : UUID @readonly;
-    customer    : Association to Customer not null;
-    deliverer   : Association to Employee;
+    key ID      : UUID @readonly;
+    customer    : Association to Customer @assert.target not null;
+    deliverer   : Association to Employee @assert.target;
 
     @readonly orderDate   : DateTime @cds.on.insert: $now;
     @readonly status      : OrderStatus default 'Pending' @assert.range;
@@ -43,7 +42,7 @@ type OrderStatus : String enum {
 
 entity OrderItem : cuid, managed {
     order       : Association to Order;
-    product     : Association to Product not null; 
+    product     : Association to Product @assert.target not null; 
     quantity    : Integer not null;
 
     @readonly unitPrice   : Decimal;
@@ -54,7 +53,7 @@ entity Expense : cuid {
     description : String;
     amount      : Decimal;
     date        : DateTime;
-    category    : ExpenseCategory;
+    category    : ExpenseCategory @assert.range;
 }
 
 type ExpenseCategory : String enum {
