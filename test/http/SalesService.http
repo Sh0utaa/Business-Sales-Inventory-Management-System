@@ -16,7 +16,7 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "name": "Ghost Lamp",
+  "name": "Jupis Sheep",
   "price": 15,
   "stock": 10
 }
@@ -54,15 +54,15 @@ Authorization: Basic {{username}}:{{password}}
 
 {
   "customer": {
-    "ID": "9c2d54af-fb08-4deb-abe6-896fc8d9225e"
+    "ID": "8271f658-4369-463f-a6f0-5632825da0f7"
   },
   "deliverer": {
-    "ID": "14036b53-e124-4b51-a624-38f1d869530b"
+    "ID": "e538876f-4a8c-4be1-aacc-49fe852c897b"
   },
   "items": [
     {
       "product": {
-        "ID": "b2d77ad6-0de3-4418-89eb-27788b914ec4"
+        "ID": "d256dd29-a1c7-4187-85fc-71361b91e318"
       },
       "quantity": 5
     }

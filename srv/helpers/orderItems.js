@@ -1,0 +1,27 @@
+function validateOrderItem(item, product, req) {
+    if (item.quantity <= 0) {
+        return req.reject(
+            400,
+            'Quantity must be greater than 0'
+        );
+    }
+
+    if (product.stock < item.quantity) {
+        return req.reject(
+            400,
+            `Not enough stock for ${product.name}`
+        );
+    }
+}
+
+function calculateItemValues(item, product) {
+    item.unitPrice = product.price;
+    item.subtotal = product.price * item.quantity;
+
+    return item;
+}
+
+export {
+    validateOrderItem,
+    calculateItemValues
+}

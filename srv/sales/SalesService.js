@@ -1,5 +1,9 @@
 import cds from '@sap/cds';
 
+import { getProduct, reduceStock } from '../helpers/product.js';
+import { validateOrderItem, calculateItemValues } from '../helpers/orderItems.js'
+import { calculateOrderTotal, calculateDeliveryFee } from '../helpers/order.js'
+
 class SalesService extends cds.ApplicationService {
     async init() {
         this.before('CREATE', 'Product', async (req) => {
@@ -10,32 +14,21 @@ class SalesService extends cds.ApplicationService {
             delete req.data.ID;
 
             for(const item of req.data.items) {
-                const productID = item.product_ID;
-
-                const product = await SELECT.one
-                    .from('Product')
-                    .where({ ID: productID });
+                const product = getProduct(item.product_ID);
                 
                 if(!product) {
                     req.reject(400, `Product ${productID} does not exist!`)
                 }
 
-                if(product.quantity <= 0) {
-                    req.reject(400, "Quantity must be grader than 0");
-                }
+                validateOrderItem(item, product, req);
 
-                if(product.stock < item.quantity) {
-                    req.reject(400, `Not enough stock for ${product.name}`);
-                }
+                calculateItemValues(item, product);
 
+                await reduceStock(product, item.quantity);
             }
 
-            // TODO
-            //   Calculate unitPrice
-            //   Calculate subtotal
-            //   Calculate total
-            //   Reduce stock
-
+            req.data.total = calculateOrderTotal(req.data.items);
+            req.data.deliveryFee = calculateDeliveryFee();
         }) 
 
         await super.init();
