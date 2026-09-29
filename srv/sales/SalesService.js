@@ -1,6 +1,6 @@
 import cds from '@sap/cds';
 
-import { getProduct, reduceStock } from '../helpers/product.js';
+import { getProduct, reduceStock, processDelivery } from '../helpers/product.js';
 import { validateOrderItem, calculateItemValues } from '../helpers/orderItems.js'
 import { calculateOrderTotal, calculateDeliveryFee } from '../helpers/order.js'
 
@@ -30,6 +30,10 @@ class SalesService extends cds.ApplicationService {
             req.data.total = calculateOrderTotal(req.data.items);
             req.data.deliveryFee = calculateDeliveryFee();
         }) 
+
+        this.after('CREATE', 'Order', async (order, req) => {
+            processDelivery(req.data.ID);
+        });
 
         await super.init();
     }

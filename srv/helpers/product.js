@@ -16,7 +16,32 @@ async function reduceStock(product, quantity) {
         .where({ ID: product.ID });
 }
 
+function randomDelay() {
+    return Math.floor(Math.random() * (25000 - 10000 + 1)) + 10000;
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function processDelivery(orderID) {
+
+    await wait(randomDelay());
+
+    await UPDATE('Order')
+        .set({ status: 'Delivering' })
+        .where({ ID: orderID });
+
+
+    await wait(randomDelay());
+
+    await UPDATE('Order')
+        .set({ status: 'Completed' })
+        .where({ ID: orderID });
+}
+
 export {
     getProduct,
-    reduceStock
+    reduceStock,
+    processDelivery
 }

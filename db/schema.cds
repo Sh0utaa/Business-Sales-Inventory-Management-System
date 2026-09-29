@@ -23,6 +23,8 @@ entity Product : cuid {
     name  : String not null;
     stock : Integer not null;
     price : Decimal not null;
+
+    image  : String;
 }
 
 entity Order {
@@ -39,7 +41,7 @@ entity Order {
 }
 
 type OrderStatus : String enum {
-    Delivered;
+    Completed;
     Delivering;
     Pending;
 }

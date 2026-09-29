@@ -10,12 +10,12 @@
   //   }
   // },
 
-Customer 
-Employee
-Product
-Order
+Delivered status updater service
 
-they all work well
+Make Expenses work
 
-// TODO
-if product exist already don't add
+Images for Products -- too complicated for now i'll come back later
+
+Authentication and Authorization 
+
+integrate an API

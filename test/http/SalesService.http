@@ -54,15 +54,15 @@ Authorization: Basic {{username}}:{{password}}
 
 {
   "customer": {
-    "ID": "351b198b-dcb0-463e-900a-acd7ecd0ac39"
+    "ID": "3492bac3-baba-47a5-876a-7baf6fb16f7e"
   },
   "deliverer": {
-    "ID": "298f2e84-9374-4cf9-9492-487a175e17bb"
+    "ID": "21a63816-ec8d-429d-a422-3e09481fc35d"
   },
   "items": [
     {
       "product": {
-        "ID": "4cd9a406-fa27-43af-b757-187cba673ca0"
+        "ID": "33b4c26d-7a90-48a1-bf7b-6cc22477d62d"
       },
       "quantity": 4
     }
