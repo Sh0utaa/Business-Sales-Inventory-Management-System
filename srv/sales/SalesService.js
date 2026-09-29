@@ -14,10 +14,10 @@ class SalesService extends cds.ApplicationService {
             delete req.data.ID;
 
             for(const item of req.data.items) {
-                const product = getProduct(item.product_ID);
+                const product = await getProduct(item.product_ID);
                 
                 if(!product) {
-                    req.reject(400, `Product ${productID} does not exist!`)
+                    req.reject(400, `Product ${item.product_ID} does not exist!`)
                 }
 
                 validateOrderItem(item, product, req);

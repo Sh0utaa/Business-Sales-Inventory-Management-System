@@ -1,8 +1,11 @@
+import { SELECT, UPDATE } from '@sap/cds/lib/ql/cds-ql.js';
 
 async function getProduct(productID) {
-    return SELECT.one
+    const product = await SELECT.one
         .from('Product')
         .where({ ID: productID });
+
+    return product;
 }
 
 async function reduceStock(product, quantity) {

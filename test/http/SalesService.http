@@ -16,20 +16,20 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "name": "Jupis Sheep",
-  "price": 15,
-  "stock": 10
+  "name": "Parówki dla Jupi",
+  "price": 10,
+  "stock": 21
 }
 
 
 ### Product
 # @name Product_PATCH
-PATCH {{server}}/odata/v4/sales/Product/ab634521-d25b-4635-8ea4-40ff2ea2cfb1
+PATCH {{server}}/odata/v4/sales/Product/d256dd29-a1c7-4187-85fc-71361b91e318
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "stock": 2
+  "stock": 5
 }
 
 
@@ -54,17 +54,17 @@ Authorization: Basic {{username}}:{{password}}
 
 {
   "customer": {
-    "ID": "8271f658-4369-463f-a6f0-5632825da0f7"
+    "ID": "351b198b-dcb0-463e-900a-acd7ecd0ac39"
   },
   "deliverer": {
-    "ID": "e538876f-4a8c-4be1-aacc-49fe852c897b"
+    "ID": "298f2e84-9374-4cf9-9492-487a175e17bb"
   },
   "items": [
     {
       "product": {
-        "ID": "d256dd29-a1c7-4187-85fc-71361b91e318"
+        "ID": "4cd9a406-fa27-43af-b757-187cba673ca0"
       },
-      "quantity": 5
+      "quantity": 4
     }
   ]
 }

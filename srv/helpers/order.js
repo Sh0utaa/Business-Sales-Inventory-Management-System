@@ -5,7 +5,8 @@ function calculateOrderTotal(items) {
 }
 
 function calculateDeliveryFee() {
-    return Math.floor(Math.random() * 1001 + 200) / 100;
+    let deliveryFee = Math.floor(Math.random() * 1001 + 200) / 100;
+    return deliveryFee.toFixed(2);
 }
 
 export { calculateOrderTotal, calculateDeliveryFee}
