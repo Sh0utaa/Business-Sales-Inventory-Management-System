@@ -1,6 +1,6 @@
 @server=http://localhost:4004
-@username=giorgi
-@password=123
+@username=alice
+@password=
 
 
 ### Product
@@ -16,26 +16,30 @@ Content-Type: application/json
 Authorization: Basic giorgi:123
 
 {
-  "name": "scary monster face",
-  "price": 12.99,
-  "stock": 3
+  "ID": "22984831-5ee1-4124-a070-a853fecc99d6",
+  "name": "name-22984831",
+  "stock": 100,
+  "price": 28.42
 }
 
 
 ### Product
 # @name Product_PATCH
-PATCH {{server}}/odata/v4/sales/Product/d256dd29-a1c7-4187-85fc-71361b91e318
+PATCH {{server}}/odata/v4/sales/Product/22984831-5ee1-4124-a070-a853fecc99d6
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "stock": 5
+  "ID": "22984831-5ee1-4124-a070-a853fecc99d6",
+  "name": "name-22984831",
+  "stock": 100,
+  "price": 28.42
 }
 
 
 ### Product
 # @name Product_DELETE
-DELETE {{server}}/odata/v4/sales/Product/28736635-be8b-4719-a53e-b370bcd175df
+DELETE {{server}}/odata/v4/sales/Product/22984831-5ee1-4124-a070-a853fecc99d6
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
@@ -50,77 +54,70 @@ Authorization: Basic {{username}}:{{password}}
 # @name Order_POST
 POST {{server}}/odata/v4/sales/Order
 Content-Type: application/json
-Authorization: Basic shota:123
+Authorization: Basic giorgi:123
 
 {
+  "ID": "6916900c-f0f9-4dd9-87fc-2d8cf7108924",
+  "customer": {
+    "ID": "10386663-18a5-4917-8855-201c7498bbac"
+  },
   "deliverer": {
-    "ID": "21a63816-ec8d-429d-a422-3e09481fc35d"
+    "ID": "28992025-f17e-4492-b1dd-1d9667601f6b"
   },
   "items": [
     {
       "product": {
-        "ID": "6e7e2704-24a0-4de3-ada8-e19f387d001c"
+        "ID": "9be357d6-8de6-4b01-b856-679552a56d9d"
       },
-      "quantity": 4
+      "quantity": 20
     }
   ]
 }
 
+
 ### Order
 # @name Order_PATCH
-PATCH {{server}}/odata/v4/sales/Order/15284027-c1cc-4aeb-8668-79fbca622643
+PATCH {{server}}/odata/v4/sales/Order/6916900c-f0f9-4dd9-87fc-2d8cf7108924
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "15284027-c1cc-4aeb-8668-79fbca622643",
+  "ID": "6916900c-f0f9-4dd9-87fc-2d8cf7108924",
   "customer": {
-    "ID": "19992064-d275-4c10-a1dd-49bb94f8bb35"
+    "ID": "10386663-18a5-4917-8855-201c7498bbac"
   },
   "deliverer": {
-    "ID": "15342713-7fb4-4d80-875a-55c78e66c693"
+    "ID": "28992025-f17e-4492-b1dd-1d9667601f6b"
   },
-  "orderDate": "2004-06-05T23:00:00.000Z",
-  "status": "Delivered",
-  "total": 45.68,
-  "deliveryFee": 67.05,
+  "orderDate": "2007-08-11T23:00:00.000Z",
+  "status": "Pending",
+  "total": 62.71,
+  "deliveryFee": 24.16,
   "items": [
     {
-      "ID": "15487066-382e-46fa-b0c3-2e97a9ac856d",
+      "ID": "16741966-f855-42e2-9a55-e80c8640374d",
       "product": {
-        "ID": "70048587-44aa-4a01-8e12-d982441071a2"
+        "ID": "15742674-98de-456c-96c6-85529a7c2f25"
       },
-      "quantity": 46,
-      "unitPrice": 84.08,
-      "subtotal": 50.31,
-      "createdAt": "2001-06-12T23:00:00.000Z",
-      "createdBy": "createdBy.97xwa@example.com",
-      "modifiedAt": "2021-03-21T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.97xwa@example.net"
+      "quantity": 13,
+      "unitPrice": 4.76,
+      "subtotal": 12.35
     },
     {
-      "ID": "15487067-7eab-4868-bce1-ac5edbe57fff",
+      "ID": "16741967-b4fa-4d1b-a2f1-acb78ca6bf24",
       "product": {
-        "ID": "28736635-be8b-4719-a53e-b370bcd175df"
+        "ID": "22984831-5ee1-4124-a070-a853fecc99d6"
       },
-      "quantity": 1,
-      "unitPrice": 3.95,
-      "subtotal": 60.17,
-      "createdAt": "2015-11-17T23:00:00.000Z",
-      "createdBy": "createdBy.97xwb@example.net",
-      "modifiedAt": "2006-07-16T23:00:00.000Z",
-      "modifiedBy": "modifiedBy.97xwb@example.net"
+      "quantity": 15,
+      "unitPrice": 66.6,
+      "subtotal": 64.94
     }
-  ],
-  "createdAt": "2019-09-14T23:00:00.000Z",
-  "createdBy": "createdBy.93l8b@example.net",
-  "modifiedAt": "2007-03-09T23:00:00.000Z",
-  "modifiedBy": "modifiedBy.93l8b@example.com"
+  ]
 }
 
 
 ### Order
 # @name Order_DELETE
-DELETE {{server}}/odata/v4/sales/Order/15284027-c1cc-4aeb-8668-79fbca622643
+DELETE {{server}}/odata/v4/sales/Order/6916900c-f0f9-4dd9-87fc-2d8cf7108924
 Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}

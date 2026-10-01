@@ -1,7 +1,9 @@
 function calculateOrderTotal(items) {
-    return items.reduce((total, item) => {
-        return total + item.subtotal;
-    }, 0);
+    return Number(
+        items.reduce((total, item) => {
+            return total + item.subtotal;
+        }, 0).toFixed(2)
+    );
 }
 
 function calculateDeliveryFee() {

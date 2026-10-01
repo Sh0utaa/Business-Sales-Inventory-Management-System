@@ -2,16 +2,24 @@ namespace business.system;
 
 using { cuid } from '@sap/cds/common';
 
-entity Employee : cuid {
-    userID: String;
-    name    : String not null;
+entity User : cuid {
+    userID       : String;
+    name         : String not null;
+    phone        : String;
+    address      : String;
+    userRole     : UserRole not null;
+    employeeRole : EmployeeRole;
 }
 
-entity Customer : cuid {
-    userID: String;
-    name    : String not null;
-    phone   : String not null;
-    address : String not null;
+type UserRole : String enum {
+    Customer;
+    Employee;
+}
+
+type EmployeeRole : String enum {
+    Admin;
+    Manager;
+    Delivery;
 }
 
 entity Product : cuid {
@@ -22,8 +30,8 @@ entity Product : cuid {
 
 entity Order {
     key ID      : UUID @readonly;
-    customer    : Association to Customer @assert.target not null;
-    deliverer   : Association to Employee @assert.target;
+    customer    : Association to User @assert.target not null;
+    deliverer   : Association to User @assert.target;
 
     @readonly orderDate : DateTime @cds.on.insert: $now;
     @readonly status    : OrderStatus default 'Pending' @assert.range;

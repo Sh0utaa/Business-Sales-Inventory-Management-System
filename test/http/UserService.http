@@ -1,0 +1,50 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### User
+# @name User_GET
+GET {{server}}/odata/v4/user/User
+Authorization: Basic {{username}}:{{password}}
+
+
+### User
+# @name User_POST
+POST {{server}}/odata/v4/user/User
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "87437625-c0e5-49f5-a0cd-4fe1aab7a01f",
+  "userID": "userID-8743762",
+  "name": "name-8743762",
+  "phone": "phone-8743762",
+  "address": "address-8743762",
+  "userRole": "Customer",
+  "employeeRole": "Manager"
+}
+
+
+### User
+# @name User_PATCH
+PATCH {{server}}/odata/v4/user/User/87437625-c0e5-49f5-a0cd-4fe1aab7a01f
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "87437625-c0e5-49f5-a0cd-4fe1aab7a01f",
+  "userID": "userID-8743762",
+  "name": "name-8743762",
+  "phone": "phone-8743762",
+  "address": "address-8743762",
+  "userRole": "Customer",
+  "employeeRole": "Manager"
+}
+
+
+### User
+# @name User_DELETE
+DELETE {{server}}/odata/v4/user/User/87437625-c0e5-49f5-a0cd-4fe1aab7a01f
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

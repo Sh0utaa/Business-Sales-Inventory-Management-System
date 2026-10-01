@@ -3,7 +3,7 @@ import cds from '@sap/cds';
 import { getProduct, reduceStock, processDelivery } from '../helpers/product.js';
 import { validateOrderItem, calculateItemValues } from '../helpers/orderItems.js'
 import { calculateOrderTotal, calculateDeliveryFee } from '../helpers/order.js'
-import { getCustomerByUserId } from '../helpers/user.js'
+import { getRandomDeliveryDriver, getUserByUserID } from '../helpers/user.js'
 
 class SalesService extends cds.ApplicationService {
     async init() {
@@ -14,13 +14,15 @@ class SalesService extends cds.ApplicationService {
         this.before('CREATE', 'Order', async (req) => {
             delete req.data.ID;
 
-            const customer = await getCustomerByUserId(req.user.id);
+            const user = await getUserByUserID(req.user.id); 
 
-            if (!customer) {
+            if (!user) {
                 return req.error(404, 'No Customer profile is linked to this user.');
-            }
+            } 
 
-            req.data.customer_ID = customer.ID; 
+            req.data.customer_ID = user.ID; 
+
+            req.data.deliverer_ID = await getRandomDeliveryDriver();
             
             for(const item of req.data.items) {
                 const product = await getProduct(item.product_ID);

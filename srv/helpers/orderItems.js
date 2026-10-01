@@ -15,8 +15,8 @@ function validateOrderItem(item, product, req) {
 }
 
 function calculateItemValues(item, product) {
-    item.unitPrice = product.price;
-    item.subtotal = product.price * item.quantity;
+    item.unitPrice = Number(product.price);
+    item.subtotal = Number((product.price * item.quantity).toFixed(2));
 
     return item;
 }
