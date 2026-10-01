@@ -1,10 +1,10 @@
 ID,userID,name,phone,address,userRole,employeeRole
 550e8400-e29b-41d4-a716-446655440001,shota,Shota Tevdorashvili,+995555111111,Tbilisi,Customer,
-550e8400-e29b-41d4-a716-446655440002,giorgi,Giorgi Beridze,+995555222222,Tbilisi,Employee,Admin
-550e8400-e29b-41d4-a716-446655440003,nino,Nino Kapanadze,+995555333333,Tbilisi,Employee,Manager
-550e8400-e29b-41d4-a716-446655440004,sandro,Sandro Maisuradze,+995555444444,Tbilisi,Employee,Delivery
-550e8400-e29b-41d4-a716-446655440005,levan,Levan Gelashvili,+995555555555,Tbilisi,Employee,Delivery
-550e8400-e29b-41d4-a716-446655440006,irakli,Irakli Khutsishvili,+995555666666,Tbilisi,Employee,Delivery
-550e8400-e29b-41d4-a716-446655440007,davit,Davit Abashidze,+995555777777,Tbilisi,Employee,Delivery
-550e8400-e29b-41d4-a716-446655440008,luka,Luka Japaridze,+995555888888,Tbilisi,Employee,Delivery
-550e8400-e29b-41d4-a716-446655440009,zura,Zura Maisuradze,+995555999999,Tbilisi,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440002,giorgi,Giorgi Beridze,+37491123456,Yerevan,Employee,Admin
+550e8400-e29b-41d4-a716-446655440003,nino,Nino Kapanadze,+48512123456,Warsaw,Employee,Manager
+550e8400-e29b-41d4-a716-446655440004,sandro,Sandro Maisuradze,+4915112345678,Berlin,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440005,levan,Levan Gelashvili,+37251234567,Tallinn,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440006,irakli,Irakli Khutsishvili,+37061234567,Vilnius,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440007,davit,Davit Abashidze,+48791234567,Wroclaw,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440008,luka,Luka Japaridze,+46701234567,Stockholm,Employee,Delivery
+550e8400-e29b-41d4-a716-446655440009,zura,Zura Maisuradze,+34612123456,Barcelona,Employee,Delivery
