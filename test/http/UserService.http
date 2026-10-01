@@ -16,7 +16,6 @@ Content-Type: application/json
 Authorization: Basic {{username}}:{{password}}
 
 {
-  "ID": "87437625-c0e5-49f5-a0cd-4fe1aab7a01f",
   "userID": "userID-8743762",
   "name": "name-8743762",
   "phone": "phone-8743762",
