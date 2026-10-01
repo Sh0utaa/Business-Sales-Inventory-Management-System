@@ -55,7 +55,6 @@ entity OrderItem : cuid {
 
     @readonly unitPrice : Decimal(10,2);
     @readonly subtotal  : Decimal(10,2);
-    @readonly currency  : String(3);
 }
 
 entity Expense : cuid {

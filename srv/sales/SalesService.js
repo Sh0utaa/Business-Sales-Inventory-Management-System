@@ -9,6 +9,10 @@ class SalesService extends cds.ApplicationService {
     async init() {
         this.before('CREATE', 'Product', async (req) => {
             delete req.data.ID;
+
+            if (req.data.currency && req.data.currency !== 'GEL') {
+                return req.error(400, 'Only GEL currency is supported.');
+            }
         }) 
 
         this.before('CREATE', 'Order', async (req) => {

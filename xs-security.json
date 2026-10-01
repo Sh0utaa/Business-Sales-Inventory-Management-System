@@ -11,6 +11,10 @@
     {
       "name": "$XSAPPNAME.Delivery",
       "description": "Delivery"
+    },
+    {
+      "name": "$XSAPPNAME.Customer",
+      "description": "Customer"
     }
   ],
   "attributes": [],

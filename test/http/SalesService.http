@@ -19,7 +19,8 @@ Authorization: Basic giorgi:123
   "ID": "22984831-5ee1-4124-a070-a853fecc99d6",
   "name": "name-22984831",
   "stock": 100,
-  "price": 28.42
+  "price": 28.42,
+  "currency": "USD"
 }
 
 
