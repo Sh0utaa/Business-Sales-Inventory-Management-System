@@ -1,38 +1,20 @@
-
-  // "cds": {
-  //   "requires": {
-  //     "db": {
-  //       "kind": "sqlite",
-  //       "credentials": {
-  //         "url": "db/db.sqlite"
-  //       }
-  //     }
-  //   }
-  // },
-
-make this program work with dummy users
-make dummy users in package.json
-
-refactor codebase to see what i need to change
-or add for the project requirements
-
-no adding pictures
-
---
-
-use weather API by the users address see what weather or time of day it is and 
-increase or decrease the price based on that
-
-today I add restrictions, I add proper Order ID management
-
 I start implementing the weather API 
+  use weather API by the users address see what weather or time of day it is and 
+  increase or decrease the price based on that
+
+today I add restrictions, I add proper Order ID management -- DONE
+
+add currency for database -- DONE
 
 calcelation Logic
+  make an endpoint where when i submit the delivery status becomes canceled
+  the stock goes back to product
 
-make an endpoint where when i submit the delivery status becomes canceled
-the stock goes back to product
+tomorrow i work on the UI
 
-add currency for database
+===--===
+
+IF I'LL HAVE TIME LEFT OVER
 
 Financial & Expense Tracking Logic
 Profit Margin & Cost Calculation:
@@ -40,8 +22,6 @@ Profit Margin & Cost Calculation:
 When an order is completed, automatically calculate net profit (total - deliveryFee - costOfGoods).
 
 Delivery Fee Auto-Expense:
-
-tomorrow i work on the UI
 
 if i will have time left i will get to:
   When an order status updates to Delivering or Completed, auto-generate an entry in the 

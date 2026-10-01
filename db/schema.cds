@@ -25,7 +25,8 @@ type EmployeeRole : String enum {
 entity Product : cuid {
     name  : String not null;
     stock : Integer not null;
-    price : Decimal not null;
+    price : Decimal(10, 2) not null;
+    currency : String(3) default 'GEL';
 }
 
 entity Order {
@@ -52,8 +53,9 @@ entity OrderItem : cuid {
     product     : Association to Product @assert.target not null;
     quantity    : Integer not null;
 
-    @readonly unitPrice : Decimal;
-    @readonly subtotal  : Decimal;
+    @readonly unitPrice : Decimal(10,2);
+    @readonly subtotal  : Decimal(10,2);
+    @readonly currency  : String(3);
 }
 
 entity Expense : cuid {
