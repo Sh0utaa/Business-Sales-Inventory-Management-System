@@ -1,6 +1,6 @@
 @server=http://localhost:4004
-@username=alice
-@password=
+@username=giorgi
+@password=123
 
 
 ### Product
@@ -13,12 +13,12 @@ Authorization: Basic {{username}}:{{password}}
 # @name Product_POST
 POST {{server}}/odata/v4/sales/Product
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
+Authorization: Basic giorgi:123
 
 {
-  "name": "Parówki dla Jupi",
-  "price": 10,
-  "stock": 21
+  "name": "scary monster face",
+  "price": 12.99,
+  "stock": 3
 }
 
 
@@ -50,19 +50,16 @@ Authorization: Basic {{username}}:{{password}}
 # @name Order_POST
 POST {{server}}/odata/v4/sales/Order
 Content-Type: application/json
-Authorization: Basic {{username}}:{{password}}
+Authorization: Basic shota:123
 
 {
-  "customer": {
-    "ID": "3492bac3-baba-47a5-876a-7baf6fb16f7e"
-  },
   "deliverer": {
     "ID": "21a63816-ec8d-429d-a422-3e09481fc35d"
   },
   "items": [
     {
       "product": {
-        "ID": "33b4c26d-7a90-48a1-bf7b-6cc22477d62d"
+        "ID": "6e7e2704-24a0-4de3-ada8-e19f387d001c"
       },
       "quantity": 4
     }

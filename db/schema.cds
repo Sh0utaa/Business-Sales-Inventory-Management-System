@@ -3,28 +3,21 @@ namespace business.system;
 using { cuid } from '@sap/cds/common';
 
 entity Employee : cuid {
+    userID: String;
     name    : String not null;
-    role    : EmployeeRole not null;
 }
 
 entity Customer : cuid {
+    userID: String;
     name    : String not null;
     phone   : String not null;
     address : String not null;
-}
-
-type EmployeeRole : String enum {
-    Delivery;
-    Manager;
-    Admin;
 }
 
 entity Product : cuid {
     name  : String not null;
     stock : Integer not null;
     price : Decimal not null;
-
-    image  : String;
 }
 
 entity Order {
@@ -56,9 +49,9 @@ entity OrderItem : cuid {
 }
 
 entity Expense : cuid {
-    description : String;
-    amount      : Decimal;
-    date        : DateTime;
+    description : String not null;
+    amount      : Decimal(10,2) not null;
+    date        : DateTime default $now;
     category    : ExpenseCategory @assert.range;
 }
 

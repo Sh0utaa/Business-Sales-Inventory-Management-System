@@ -10,12 +10,39 @@
   //   }
   // },
 
-Delivered status updater service
+make this program work with dummy users
+make dummy users in package.json
 
-Make Expenses work
+refactor codebase to see what i need to change
+or add for the project requirements
 
-Images for Products -- too complicated for now i'll come back later
+no adding pictures
 
-Authentication and Authorization 
+--
 
-integrate an API
+use weather API by the users address see what weather or time of day it is and 
+increase or decrease the price based on that
+
+today I add restrictions, I add proper Order ID management
+
+I start implementing the weather API 
+
+calcelation Logic
+
+make an endpoint where when i submit the delivery status becomes canceled
+the stock goes back to product
+
+add currency for database
+
+Financial & Expense Tracking Logic
+Profit Margin & Cost Calculation:
+
+When an order is completed, automatically calculate net profit (total - deliveryFee - costOfGoods).
+
+Delivery Fee Auto-Expense:
+
+tomorrow i work on the UI
+
+if i will have time left i will get to:
+  When an order status updates to Delivering or Completed, auto-generate an entry in the 
+  Expense entity under category Delivery or Production to log the operational cost automatically
