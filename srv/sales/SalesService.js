@@ -4,6 +4,7 @@ import { getProduct, reduceStock, processDelivery } from '../helpers/product.js'
 import { validateOrderItem, calculateItemValues } from '../helpers/orderItems.js'
 import { calculateOrderTotal, calculateDeliveryFee } from '../helpers/order.js'
 import { getRandomDeliveryDriver, getUserByUserID } from '../helpers/user.js'
+import { geocode, getWeather } from '../helpers/weather.js';
 
 class SalesService extends cds.ApplicationService {
     async init() {
@@ -26,7 +27,15 @@ class SalesService extends cds.ApplicationService {
 
             req.data.customer_ID = user.ID; 
 
-            req.data.deliverer_ID = await getRandomDeliveryDriver();
+            const driver = await getRandomDeliveryDriver();
+            req.data.deliverer_ID = driver?.ID;
+
+            const location = await geocode(user.address);
+
+            const weather = await getWeather(
+                location.latitude,
+                location.longitude
+            );
             
             for(const item of req.data.items) {
                 const product = await getProduct(item.product_ID);
@@ -43,7 +52,7 @@ class SalesService extends cds.ApplicationService {
             }
 
             req.data.total = calculateOrderTotal(req.data.items);
-            req.data.deliveryFee = calculateDeliveryFee();
+            req.data.deliveryFee = calculateDeliveryFee(weather);
         }) 
 
         this.after('CREATE', 'Order', async (order, req) => {
