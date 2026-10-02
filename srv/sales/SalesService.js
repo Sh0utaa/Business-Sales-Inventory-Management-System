@@ -1,8 +1,8 @@
 import cds from '@sap/cds';
 
-import { getProduct, reduceStock, processDelivery } from '../helpers/product.js';
+import { getProduct, reduceStock } from '../helpers/product.js';
 import { validateOrderItem, calculateItemValues } from '../helpers/orderItems.js'
-import { calculateOrderTotal, calculateDeliveryFee } from '../helpers/order.js'
+import { calculateOrderTotal, calculateOrderCost, calculateDeliveryFee, processDelivery } from '../helpers/order.js'
 import { getRandomDeliveryDriver, getUserByUserID } from '../helpers/user.js'
 import { geocode, getWeather } from '../helpers/weather.js';
 
@@ -51,8 +51,18 @@ class SalesService extends cds.ApplicationService {
                 await reduceStock(product, item.quantity);
             }
 
-            req.data.total = calculateOrderTotal(req.data.items);
             req.data.deliveryFee = calculateDeliveryFee(weather);
+
+            const total = calculateOrderTotal(req.data.items);
+            const totalCost = calculateOrderCost(req.data.items);
+
+            req.data.total = total;
+            req.data.totalCost = totalCost;
+
+
+            req.data.netProfit = Number(
+                (total - totalCost - req.data.deliveryFee).toFixed(2)
+            );
         }) 
 
         this.after('CREATE', 'Order', async (order, req) => {

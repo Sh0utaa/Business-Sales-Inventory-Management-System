@@ -6,6 +6,14 @@ function calculateOrderTotal(items) {
     );
 }
 
+function calculateOrderCost(items) {
+    return Number(
+        items.reduce((total, item) => {
+            return total + item.costTotal;
+        }, 0).toFixed(2)
+    );
+}
+
 function calculateDeliveryFee(weather) {
     let fee = Math.round(Math.random() * 1000 + 200) / 100;
 
@@ -20,4 +28,28 @@ function calculateDeliveryFee(weather) {
     return fee;
 }
 
-export { calculateOrderTotal, calculateDeliveryFee}
+function randomDelay() {
+    return Math.floor(Math.random() * (25000 - 10000 + 1)) + 10000;
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function processDelivery(orderID) {
+
+    await wait(randomDelay());
+
+    await UPDATE('Order')
+        .set({ status: 'Delivering' })
+        .where({ ID: orderID });
+
+
+    await wait(randomDelay());
+
+    await UPDATE('Order')
+        .set({ status: 'Completed' })
+        .where({ ID: orderID });
+}
+
+export { calculateOrderTotal, calculateDeliveryFee, processDelivery, calculateOrderCost }

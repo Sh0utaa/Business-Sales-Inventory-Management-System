@@ -27,6 +27,7 @@ entity Product : cuid {
     stock : Integer not null;
     price : Decimal(10, 2) not null;
     currency : String(3) default 'GEL';
+    costPrice : Decimal;
 }
 
 entity Order {
@@ -37,6 +38,9 @@ entity Order {
     @readonly orderDate : DateTime @cds.on.insert: $now;
     @readonly status    : OrderStatus default 'Pending' @assert.range;
     @readonly total     : Decimal;
+
+    @readonly totalCost : Decimal;
+    @readonly netProfit : Decimal;
 
     deliveryFee : Decimal;
     items       : Composition of many OrderItem on items.order = $self;
@@ -55,18 +59,8 @@ entity OrderItem : cuid {
 
     @readonly unitPrice : Decimal(10,2);
     @readonly subtotal  : Decimal(10,2);
+
+    @readonly costPrice : Decimal(10, 2);
+    @readonly costTotal : Decimal(10, 2);
 }
 
-entity Expense : cuid {
-    description : String not null;
-    amount      : Decimal(10,2) not null;
-    date        : DateTime default $now;
-    category    : ExpenseCategory @assert.range;
-}
-
-type ExpenseCategory : String enum {
-    Delivery;
-    Packaging;
-    Production;
-    Other;
-}

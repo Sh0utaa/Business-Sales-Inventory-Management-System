@@ -2,13 +2,11 @@ I start implementing the weather API
   use weather API by the users address see what weather or time of day it is and 
   increase or decrease the price based on that
 
+  -- DONE
+
 today I add restrictions, I add proper Order ID management -- DONE
 
 add currency for database -- DONE
-
-calcelation Logic
-  make an endpoint where when i submit the delivery status becomes canceled
-  the stock goes back to product
 
 tomorrow i work on the UI
 

@@ -55,7 +55,7 @@ Authorization: Basic {{username}}:{{password}}
 # @name Order_POST
 POST {{server}}/odata/v4/sales/Order
 Content-Type: application/json
-Authorization: Basic giorgi:123
+Authorization: Basic shota:123
 
 {
   "ID": "6916900c-f0f9-4dd9-87fc-2d8cf7108924",
@@ -68,9 +68,9 @@ Authorization: Basic giorgi:123
   "items": [
     {
       "product": {
-        "ID": "9be357d6-8de6-4b01-b856-679552a56d9d"
+        "ID": "550e8400-e29b-41d4-a716-446655440003"
       },
-      "quantity": 20
+      "quantity": 5
     }
   ]
 }
