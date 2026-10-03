@@ -48,7 +48,7 @@ Authorization: Basic {{username}}:{{password}}
 ### Order
 # @name Order_GET
 GET {{server}}/odata/v4/sales/Order
-Authorization: Basic {{username}}:{{password}}
+Authorization: Basic shota:123
 
 
 ### Order

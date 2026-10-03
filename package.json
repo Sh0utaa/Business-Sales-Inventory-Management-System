@@ -58,7 +58,8 @@
   "scripts": {
     "start": "cds-serve",
     "watch-products": "cds watch --open products/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-business-ui": "cds watch --open businessui/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-business-ui": "cds watch --open businessui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-sales-business-service": "cds watch --open salesbusinessservice/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
@@ -66,6 +67,7 @@
   ],
   "sapux": [
     "app/products",
-    "app/business-ui"
+    "app/business-ui",
+    "app/sales-business-service"
   ]
 }
