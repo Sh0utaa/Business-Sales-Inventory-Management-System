@@ -1,7 +1,7 @@
 {
   "_version": "1.86.0",
   "sap.app": {
-    "id": "salesbusinessservice",
+    "id": "businesssystem",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.30.0",
-      "toolsId": "933a89ba-973b-4661-af7b-db98859f8dd5"
+      "toolsId": "17e63fb3-7aa4-4848-9872-617e74bc1977"
     },
     "dataSources": {
       "mainService": {
@@ -60,7 +60,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "salesbusinessservice.i18n.i18n"
+          "bundleName": "businesssystem.i18n.i18n"
         }
       },
       "": {

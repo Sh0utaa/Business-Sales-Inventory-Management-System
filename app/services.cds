@@ -1,2 +1,1 @@
-
-using from './sales-business-service/annotations';
+using from './business-system/annotations';

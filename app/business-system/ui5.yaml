@@ -2,7 +2,7 @@
 
 specVersion: "4.0"
 metadata:
-  name: salesbusinessservice
+  name: businesssystem
 type: application
 server:
   customMiddleware:
