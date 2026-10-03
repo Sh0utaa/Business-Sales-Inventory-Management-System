@@ -61,7 +61,8 @@
     "watch-business-ui": "cds watch --open businessui/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-sales-business-service": "cds watch --open salesbusinessservice/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-products-service": "cds watch --open productsservice/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-business-system": "cds watch --open businesssystem/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-business-system": "cds watch --open businesssystem/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-users": "cds watch --open users/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
@@ -72,6 +73,8 @@
     "app/business-ui",
     "app/sales-business-service",
     "app/products-service",
-    "app/business-system"
+    "app/business-system",
+    "app/products",
+    "app/users"
   ]
 }
